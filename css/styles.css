@@ -1,0 +1,253 @@
+/* ------------------------------ variables ------------------------------ */
+/* typography variables */
+/* color variables */
+/* yellow */
+/* mint */
+/* rose */
+/* sea green */
+/* baby blue */
+/* ------------------------------ typography ------------------------------ */
+@font-face {
+  font-family: "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  src: url("fonts/GothamNarrow-Black.otf") format("opentype"); }
+@font-face {
+  font-family: "GothamNarrow-BlackItalic", "Franklin Gothic Medium", Arial, sans-serif;
+  src: url("fonts/GothamNarrow-BlackItalic.otf") format("opentype"); }
+@font-face {
+  font-family: "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  src: url("fonts/GothamNarrow-Book.otf") format("opentype"); }
+@font-face {
+  font-family: "GothamNarrow-BookItalic", "Franklin Gothic Medium", Arial, sans-serif;
+  src: url("fonts/GothamNarrow-BookItalic.otf") format("opentype"); }
+/* ------------------------------ headings ------------------------------ */
+/* ------------------------------ foundations ------------------------------ */
+/* prevent certain mobile browsers from automatically zooming fonts */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* removes undesired page margins
+   standarizes font and line-height */
+body {
+  margin: 0;
+  font: 16px/1 "GothamNarrow-Book";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+/* strips margin and padding away from core elements */
+h1, h2, h3, h4, h5, h6, p,
+blockquote,
+figure,
+ol, ul {
+  margin: 0;
+  padding: 0; }
+
+/* fixes main tag from breaking layout in ie
+   strips styling from lists */
+main,
+li {
+  display: block; }
+
+/* makes headings inherit the same size as surrounding text and not arbitrary larger sizes */
+h1, h2, h3, h4 {
+  font-size: inherit; }
+
+/* corrects some browsers defaulting to bolder */
+strong {
+  font-weight: bold; }
+
+/* makes links inherit the same color as surroundings */
+a,
+button {
+  color: inherit;
+  transition: .3s; }
+
+a {
+  text-decoration: none; }
+
+/* resets the native appearance in all browsers, gives all buttons a pointer cursor */
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer; }
+
+/* fixes bug in firefox */
+::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/* makes sure that images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+/* ------------------------------ custom ------------------------------ */
+/* --------------- header --------------- */
+header {
+  width: 100%;
+  height: auto;
+  /*background: #ee4a37;*/
+  position: fixed;
+  /*z-index: 100;*/ }
+  header #logo {
+    width: 5.17578%;
+    padding-left: 4.88281%;
+    padding-right: 4.88281%;
+    padding-top: 4.00391%;
+    padding-bottom: 4.00391%;
+    float: left;
+    /*	img {
+    		width: 134px;
+    	}*/ }
+  header #navbutton {
+    /*width: percentage(29px/1024px);*/
+    /*padding: percentage(21px/1024px);*/
+    width: 35px;
+    padding: 25px;
+    float: right; }
+
+/* --------------- page layout --------------- */
+.layout {
+  width: 100%; }
+
+/* for all pages */
+.layoutcontainer {
+  width: 78.125%;
+  /* the width of the main container */
+  margin-left: 14.94141%;
+  /* 153px should be the total width of .logo */
+  /*margin-right: percentage(29px/1024px);*/
+  box-sizing: border-box;
+  /* box-sizing puts borders and padding inside the content */
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  color: #FFFFFF; }
+
+/* for pages with the 2-column layout */
+.flexbox-container {
+  /* for any page that has the main 2-column layout */
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex; }
+  .flexbox-container > div {
+    /* applies to the 2 main columns */
+    box-sizing: border-box; }
+  .flexbox-container > .col1-container {
+    /* main column 1 */
+    width: 62.5%;
+    /* 800 is the width of .layoutcontainer */
+    border-right: 1px solid #FFFFFF; }
+  .flexbox-container > .col2-container {
+    /* main column 2 */
+    width: 37.5%; }
+
+/* for pages with the 2-column layout and boxes inside each column */
+.box-container-col1 {
+  /* boxes inside column 1 */
+  padding: 8.2%; }
+
+.box-container-col2 {
+  /* boxes inside column 2 */
+  padding: 10.33333%; }
+
+/* --------------- page 1 (yellow) --------------- */
+#page1 {
+  background: #FBE000; }
+
+#page1container {
+  padding: 4.00391%;
+  /* padding for the main container */ }
+  #page1container h1 {
+    font: 4em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+    padding-bottom: 0.4em; }
+  #page1container h2 {
+    font: 2em/1 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+    padding-bottom: 0.6em; }
+  #page1container h6 {
+    font: 2em/1.2 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
+  #page1container .italics {
+    font-family: "GothamNarrow-BookItalic"; }
+
+/* --------------- page 2 (mint) --------------- */
+#page2 {
+  background: #B1D8BE; }
+
+#page2container h6 {
+  font: 2em/1.2 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
+#page2container h3 {
+  font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.4em; }
+#page2container p {
+  font: 1.2em/1.4 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.8em; }
+#page2container h4 {
+  font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 1em; }
+#page2container figcaption {
+  font: 0.8em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  text-transform: uppercase; }
+
+/* tells how to layout the imgs in col 2 */
+#awardscontainer, #orgscontainer {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex; }
+  #awardscontainer > figure, #orgscontainer > figure {
+    /* holds img and figcaption */
+    width: 40%;
+    padding-right: 6.66667%; }
+    #awardscontainer > figure > img, #orgscontainer > figure > img {
+      max-width: 100%;
+      height: auto;
+      padding-bottom: 12.5%; }
+
+/* page 2 boxes */
+#quote {
+  /* column 1, 1st box */
+  border-bottom: 1px solid #FFFFFF; }
+  #quote .quoteby {
+    text-align: right; }
+
+#beliefs {
+  /* column 1, 2nd box */ }
+  #beliefs li {
+    display: inline-block; }
+    #beliefs li h5 {
+      font-size: 2em;
+      padding: 0; }
+
+#awards {
+  /* column 2, 1st box */
+  border-bottom: 1px solid #FFFFFF; }
+
+/* --------------- page 3 (pink) --------------- */
+#page3 {
+  background: #F47472; }
+
+#page3container h3 {
+  font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.4em; }
+#page3container h5 {
+  font: 1.6em/1.4 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
+#page3container p {
+  font: 1.2em/1.4 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.8em; }
+#page3container h4 {
+  font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 1em; }
+#page3container figcaption {
+  font: 0.8em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  text-transform: uppercase; }
+
+/* ------------------------------ media queries ------------------------------ */
+
+/*# sourceMappingURL=styles.css.map */

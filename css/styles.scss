@@ -1,0 +1,383 @@
+/* ------------------------------ variables ------------------------------ */
+
+/* typography variables */
+
+$pageHeadingFont: 'GothamNarrow-Black';
+$pageHeadingFontItalic: 'GothamNarrow-BlackItalic';
+
+$pageParagraphFont: 'GothamNarrow-Book';
+$pageParagraphFontItalic: 'GothamNarrow-BookItalic';
+
+/* color variables */
+
+$pageFontColor: #FFFFFF; 
+
+$page1BackgroundColor: #FBE000; /* yellow */
+$page2BackgroundColor: #B1D8BE; /* mint */
+$page3BackgroundColor: #F47472; /* rose */
+$page4BackgroundColor: #C1E5E1; /* sea green */
+$page5BackgroundColor: #CEE8EF; /* baby blue */
+
+/* ------------------------------ typography ------------------------------ */
+
+@font-face {
+	font-family: $pageHeadingFont, 'Franklin Gothic Medium', Arial, sans-serif;
+	src: url('fonts/GothamNarrow-Black.otf') format('opentype');
+}
+
+@font-face {
+	font-family: $pageHeadingFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
+	src: url('fonts/GothamNarrow-BlackItalic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: $pageParagraphFont, 'Franklin Gothic Medium', Arial, sans-serif;
+	src: url('fonts/GothamNarrow-Book.otf') format('opentype');
+}
+
+@font-face {
+	font-family: $pageParagraphFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
+	src: url('fonts/GothamNarrow-BookItalic.otf') format('opentype');
+}
+
+/* ------------------------------ headings ------------------------------ */
+
+@mixin heading1 {
+	h1 {
+		font: 4em/1 $pageHeadingFont,'Franklin Gothic Medium', Arial, sans-serif;
+		padding-bottom: 0.4em;
+	}
+}
+
+@mixin heading2 {
+	h2 {
+		font: 2em/1 $pageParagraphFont,'Franklin Gothic Medium', Arial, sans-serif;
+		padding-bottom: 0.6em;
+	}
+}
+
+@mixin heading3 {
+	h3 {
+		font: 2.7em/1 $pageHeadingFont,'Franklin Gothic Medium', Arial, sans-serif;
+		padding-bottom: 0.4em;
+	}
+}
+
+@mixin heading4 {
+	h4 {
+		font: 1.2em/1.2 $pageParagraphFont,'Franklin Gothic Medium', Arial, sans-serif;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		padding-bottom: 1em;
+	}
+}
+
+@mixin heading5 {
+	h5 {
+		font: 1.6em/1.4 $pageHeadingFont,'Franklin Gothic Medium', Arial, sans-serif;
+	}
+}
+
+@mixin heading6 {
+	h6 {
+		font: 2em/1.2 $pageHeadingFont,'Franklin Gothic Medium', Arial, sans-serif;
+	}
+}
+
+@mixin paragraph {
+	p {
+		font: 1.2em/1.4 $pageParagraphFont,'Franklin Gothic Medium', Arial, sans-serif;
+		padding-bottom: 0.8em;
+	}
+}
+
+@mixin figurecaption {
+	figcaption {
+		font: .8em/1.2 $pageParagraphFont,'Franklin Gothic Medium', Arial, sans-serif;
+		text-transform: uppercase;
+	}
+}
+
+@mixin textitalics {
+	.italics {
+		font-family: $pageParagraphFontItalic;
+	}
+}
+
+/* ------------------------------ foundations ------------------------------ */
+
+/* prevent certain mobile browsers from automatically zooming fonts */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* removes undesired page margins
+   standarizes font and line-height */
+body {
+
+    margin: 0;
+    font: 16px/1 $pageParagraphFont;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* strips margin and padding away from core elements */
+h1,h2,h3,h4,h5,h6,p,
+blockquote,
+figure,
+ol,ul {
+	
+    margin: 0;
+    padding: 0;
+}
+
+/* fixes main tag from breaking layout in ie
+   strips styling from lists */
+main,
+li {
+    display: block;
+}
+
+/* makes headings inherit the same size as surrounding text and not arbitrary larger sizes */
+h1,h2,h3,h4 {
+    font-size: inherit;
+}
+
+/* corrects some browsers defaulting to bolder */
+strong {
+    font-weight: bold;
+}
+
+/* makes links inherit the same color as surroundings */
+a,
+button {
+    color: inherit;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* resets the native appearance in all browsers, gives all buttons a pointer cursor */
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+/* fixes bug in firefox */
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* makes sure that images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/* ------------------------------ custom ------------------------------ */
+
+/* --------------- header --------------- */
+
+header {
+	width: 100%;
+	height: auto;
+	/*background: #ee4a37;*/
+	position: fixed;
+	/*z-index: 100;*/
+
+	#logo {
+		width: percentage(53px/1024px);
+
+		padding-left: percentage(50px/1024px);
+		padding-right: percentage(50px/1024px);
+		padding-top: percentage(41px/1024px);
+		padding-bottom: percentage(41px/1024px);
+		
+		float: left;
+
+	/*	img {
+			width: 134px;
+		}*/
+	}
+
+	#navbutton {
+		/*width: percentage(29px/1024px);*/
+		/*padding: percentage(21px/1024px);*/
+		width: 35px;
+		padding: 25px;
+		
+
+		float: right;
+	}
+
+}
+
+/* --------------- page layout --------------- */
+
+.layout {
+	width: 100%;
+}
+
+/* for all pages */ 
+
+.layoutcontainer {
+	width: percentage(800px/1024px); /* the width of the main container */ 
+	
+	margin-left: percentage(153px/1024px); /* 153px should be the total width of .logo */
+	/*margin-right: percentage(29px/1024px);*/
+
+	box-sizing: border-box; /* box-sizing puts borders and padding inside the content */
+	border-left: 1px solid $pageFontColor;
+	border-right: 1px solid $pageFontColor;
+
+	color: $pageFontColor;
+}
+
+/* for pages with the 2-column layout */
+
+.flexbox-container { /* for any page that has the main 2-column layout */
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	> div { /* applies to the 2 main columns */
+		box-sizing: border-box;
+	}
+
+	> .col1-container { /* main column 1 */
+		width: percentage(500px/800px); /* 800 is the width of .layoutcontainer */
+		border-right: 1px solid $pageFontColor;
+	}
+
+	> .col2-container { /* main column 2 */
+		width: percentage(300px/800px);
+
+	}
+}
+
+/* for pages with the 2-column layout and boxes inside each column */
+
+.box-container-col1 { /* boxes inside column 1 */
+	padding: percentage(41px/500px);
+}
+
+.box-container-col2 { /* boxes inside column 2 */
+	padding: percentage(31px/300px);
+}
+
+/* --------------- page 1 (yellow) --------------- */
+
+#page1 {
+	background: $page1BackgroundColor;
+}
+
+#page1container {
+	padding: percentage(41px/1024px); /* padding for the main container */ 
+
+	@include heading1;
+
+	@include heading2;
+
+	@include heading6;
+
+	@include textitalics;
+}
+
+/* --------------- page 2 (mint) --------------- */
+
+#page2 {
+	background: $page2BackgroundColor;
+}
+
+#page2container {
+	@include heading6;
+
+	@include heading3;
+
+	@include paragraph;
+
+	@include heading4;
+
+	@include figurecaption;
+}
+
+/* tells how to layout the imgs in col 2 */
+
+#awardscontainer, #orgscontainer{
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	> figure { /* holds img and figcaption */
+		width: percentage(120px/300px);
+		padding-right: percentage(20px/300px);
+
+		> img {
+			max-width: 100%;
+			height: auto;
+			padding-bottom: percentage(15px/120px);
+		}
+	}
+}
+
+/* page 2 boxes */
+
+#quote { /* column 1, 1st box */
+	border-bottom: 1px solid $pageFontColor;
+
+	.quoteby {
+		text-align: right;
+	}
+}
+
+#beliefs { /* column 1, 2nd box */
+	li {
+		display: inline-block;
+
+		h5 {
+			font-size: 2em;
+			padding: 0;
+		}
+	}
+	
+}
+
+#awards { /* column 2, 1st box */
+	border-bottom: 1px solid $pageFontColor;
+}
+
+/* --------------- page 3 (pink) --------------- */
+
+#page3 {
+	background: $page3BackgroundColor;
+}
+
+#page3container {
+
+	@include heading3;
+
+	@include heading5;
+
+	@include paragraph;
+
+	@include heading4;
+
+	@include figurecaption;
+}
+
+
+
+/* ------------------------------ media queries ------------------------------ */
+
+
+
