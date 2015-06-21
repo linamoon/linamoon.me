@@ -75,6 +75,7 @@ $page5BackgroundColor: #CEE8EF; /* baby blue */
 @mixin heading5 {
 	h5 {
 		font: 1.6em/1.4 $pageHeadingFont,'Franklin Gothic Medium', Arial, sans-serif;
+		padding-bottom: 0.4em;
 	}
 }
 
@@ -215,8 +216,8 @@ header {
 		/*padding: percentage(21px/1024px);*/
 		width: 35px;
 		padding: 25px;
+		padding-top: 70px;
 		
-
 		float: right;
 	}
 
@@ -323,8 +324,6 @@ header {
 		padding-right: percentage(20px/300px);
 
 		> img {
-			max-width: 100%;
-			height: auto;
 			padding-bottom: percentage(15px/120px);
 		}
 	}
@@ -372,8 +371,106 @@ header {
 
 	@include heading4;
 
-	@include figurecaption;
 }
+
+/* page 3 boxes */
+
+.post {
+	padding-bottom: percentage(10px/500px)
+}
+
+.postcontainer {
+
+	p {
+		width: percentage(250px/500px);
+		padding-right: percentage(40px/500px);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+}
+
+#goodat {
+	border-bottom: 1px solid $pageFontColor;
+}
+
+.skillslist {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#skillslist-1 {
+	padding-right: percentage(25px/300px);
+}
+
+/* --------------- page 4 (sea green) --------------- */
+
+#page4 {
+	background: $page4BackgroundColor;
+}
+
+#page4container {
+
+	@include heading3;
+
+	@include heading5;
+
+	@include paragraph;
+
+	@include heading4;
+
+}
+
+/* page 4 boxes */
+
+
+
+/* --------------- page 5 (baby blue) --------------- */
+
+#page5 {
+	background: $page5BackgroundColor;
+}
+
+#page5container {
+	padding: percentage(41px/1024px); /* padding for the main container */ 
+
+	@include heading1;
+
+	@include heading2;
+
+	@include heading3;
+
+	@include heading4;
+
+}
+
+/* page 5 boxes */
+
+
+/* --------------- footer --------------- */
+
+footer {
+	background: #FFFFFF;
+	padding: percentage(21px/1024px); /* padding for the main container */
+	padding-bottom: percentage(31px/1024px);
+
+	color: #B3B3B3;
+
+	@include heading4;
+	h4 {
+		font-size: 0.8em;
+		letter-spacing: 0.1em;
+	}
+
+	#copyright {
+		float: left;
+	}
+
+	#madewithlove {
+		float: right;
+	}
+}
+
 
 
 

@@ -109,6 +109,7 @@ header {
     /*padding: percentage(21px/1024px);*/
     width: 35px;
     padding: 25px;
+    padding-top: 70px;
     float: right; }
 
 /* --------------- page layout --------------- */
@@ -204,8 +205,6 @@ header {
     width: 40%;
     padding-right: 6.66667%; }
     #awardscontainer > figure > img, #orgscontainer > figure > img {
-      max-width: 100%;
-      height: auto;
       padding-bottom: 12.5%; }
 
 /* page 2 boxes */
@@ -235,7 +234,8 @@ header {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
   padding-bottom: 0.4em; }
 #page3container h5 {
-  font: 1.6em/1.4 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
+  font: 1.6em/1.4 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.4em; }
 #page3container p {
   font: 1.2em/1.4 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
   padding-bottom: 0.8em; }
@@ -244,9 +244,89 @@ header {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding-bottom: 1em; }
-#page3container figcaption {
-  font: 0.8em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
-  text-transform: uppercase; }
+
+/* page 3 boxes */
+.post {
+  padding-bottom: 2%; }
+
+.postcontainer p {
+  width: 50%;
+  padding-right: 8%;
+  display: inline-block;
+  vertical-align: top; }
+
+#goodat {
+  border-bottom: 1px solid #FFFFFF; }
+
+.skillslist {
+  display: inline-block;
+  vertical-align: top; }
+
+#skillslist-1 {
+  padding-right: 8.33333%; }
+
+/* --------------- page 4 (sea green) --------------- */
+#page4 {
+  background: #C1E5E1; }
+
+#page4container h3 {
+  font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.4em; }
+#page4container h5 {
+  font: 1.6em/1.4 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.4em; }
+#page4container p {
+  font: 1.2em/1.4 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  padding-bottom: 0.8em; }
+#page4container h4 {
+  font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 1em; }
+
+/* page 4 boxes */
+/* --------------- page 5 (baby blue) --------------- */
+#page5 {
+  background: #CEE8EF; }
+
+#page5container {
+  padding: 4.00391%;
+  /* padding for the main container */ }
+  #page5container h1 {
+    font: 4em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+    padding-bottom: 0.4em; }
+  #page5container h2 {
+    font: 2em/1 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+    padding-bottom: 0.6em; }
+  #page5container h3 {
+    font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+    padding-bottom: 0.4em; }
+  #page5container h4 {
+    font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 1em; }
+
+/* page 5 boxes */
+/* --------------- footer --------------- */
+footer {
+  background: #FFFFFF;
+  padding: 2.05078%;
+  /* padding for the main container */
+  padding-bottom: 3.02734%;
+  color: #B3B3B3; }
+  footer h4 {
+    font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 1em; }
+  footer h4 {
+    font-size: 0.8em;
+    letter-spacing: 0.1em; }
+  footer #copyright {
+    float: left; }
+  footer #madewithlove {
+    float: right; }
 
 /* ------------------------------ media queries ------------------------------ */
 
