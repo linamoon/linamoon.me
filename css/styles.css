@@ -9,16 +9,16 @@
 /* ------------------------------ typography ------------------------------ */
 @font-face {
   font-family: "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-Black.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-Black.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-BlackItalic", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-BlackItalic.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-BlackItalic.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-Book.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-Book.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-BookItalic", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-BookItalic.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-BookItalic.otf") format("opentype"); }
 /* ------------------------------ headings ------------------------------ */
 /* ------------------------------ foundations ------------------------------ */
 /* prevent certain mobile browsers from automatically zooming fonts */
