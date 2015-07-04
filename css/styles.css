@@ -9,16 +9,16 @@
 /* ------------------------------ typography ------------------------------ */
 @font-face {
   font-family: "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-Black.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-Black.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-BlackItalic", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-BlackItalic.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-BlackItalic.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-Book.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-Book.otf") format("opentype"); }
 @font-face {
   font-family: "GothamNarrow-BookItalic", "Franklin Gothic Medium", Arial, sans-serif;
-  src: url("fonts/GothamNarrow-BookItalic.otf") format("opentype"); }
+  src: url("../fonts/GothamNarrow-BookItalic.otf") format("opentype"); }
 /* ------------------------------ headings ------------------------------ */
 /* ------------------------------ foundations ------------------------------ */
 /* prevent certain mobile browsers from automatically zooming fonts */
@@ -111,6 +111,54 @@ header {
     padding: 25px;
     padding-top: 70px;
     float: right; }
+
+/* --------------- overlay menu --------------- */
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  color: #B3B3B3;
+  overflow: scroll; }
+  .overlay #closebutton {
+    display: block;
+    text-align: right;
+    padding: 10px 20px; }
+  .overlay nav ul li {
+    font-size: 4em;
+    text-align: center;
+    padding-top: 0.97656%;
+    padding-bottom: 0.97656%; }
+    .overlay nav ul li:nth-child(1):hover {
+      background-color: #B1D8BE; }
+      .overlay nav ul li:nth-child(1):hover h1 {
+        color: white; }
+    .overlay nav ul li:nth-child(2):hover {
+      background-color: #F47472; }
+      .overlay nav ul li:nth-child(2):hover h1 {
+        color: white; }
+    .overlay nav ul li:nth-child(3):hover {
+      background-color: #C1E5E1; }
+      .overlay nav ul li:nth-child(3):hover h1 {
+        color: white; }
+    .overlay nav ul li:nth-child(4):hover {
+      background-color: #C1E5E1; }
+      .overlay nav ul li:nth-child(4):hover h1 {
+        color: white; }
+    .overlay nav ul li:nth-child(5):hover {
+      background-color: #CEE8EF; }
+      .overlay nav ul li:nth-child(5):hover h1 {
+        color: white; }
+    .overlay nav ul li #twitternav:hover {
+      color: #C4C4C4;
+      /*twitter blue*/ }
+    .overlay nav ul li #emailnav:hover {
+      color: #C4C4C4;
+      /*twitter blue*/ }
 
 /* --------------- page layout --------------- */
 .layout {
@@ -246,10 +294,10 @@ header {
   padding-bottom: 1em; }
 
 /* page 3 boxes */
-.post {
+.workpost {
   padding-bottom: 2%; }
 
-.postcontainer p {
+.workpostcontainer p {
   width: 50%;
   padding-right: 8%;
   display: inline-block;
@@ -272,19 +320,41 @@ header {
 #page4container h3 {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
   padding-bottom: 0.4em; }
+#page4container h4 {
+  font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 1em; }
 #page4container h5 {
   font: 1.6em/1.4 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
   padding-bottom: 0.4em; }
 #page4container p {
   font: 1.2em/1.4 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
   padding-bottom: 0.8em; }
-#page4container h4 {
-  font: 1.2em/1.2 "GothamNarrow-Book", "Franklin Gothic Medium", Arial, sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding-bottom: 1em; }
+#page4container .tool {
+  width: 38%;
+  padding-right: 10%;
+  padding-bottom: 4%;
+  display: inline-block; }
+  #page4container .tool img {
+    padding-bottom: 8%;
+    text-align: center; }
+  #page4container .tool h4 {
+    padding-bottom: 0.5em; }
+#page4container .blogpost {
+  padding-top: 10%;
+  padding-bottom: 10%; }
+  #page4container .blogpost .date, #page4container .blogpost .readmore, #page4container .blogpost .blogpostfooter {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding-bottom: 0; }
+  #page4container .blogpost h5 {
+    padding-bottom: 0; }
+  #page4container .blogpost p {
+    padding-bottom: 0.4em; }
+  #page4container .blogpost .blogpostfooter {
+    text-align: right; }
 
-/* page 4 boxes */
 /* --------------- page 5 (baby blue) --------------- */
 #page5 {
   background: #CEE8EF; }

@@ -12,9 +12,9 @@
    <title>Lina Moon | UX + Graphic Design</title>
 
    <!-- styles -->
+   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
    <link href="css/normalize.css" rel="stylesheet">
    <link href="css/styles.css" rel="stylesheet">
-
 </head> <!-- end head -->
 
 <!-- ////////////////////////////// body ////////////////////////////// -->
@@ -32,19 +32,27 @@
 
     <!-- nav icon -->
     <div id="navbutton">
-      <a href="">
-        <img src="img/nav.png" alt="" >
-      </a>
+      <img src="img/nav.png" alt="" >
     </div>
-<!--     <ul>
-      <li>About</li>
-      <li>My Work</li>
-      <li>My Process</li>
-      <li>Blog</li>
-      <li>Contact Me</li>
-    </ul> -->
-
   </header> <!-- end header  -->
+
+  <!-- .overlay menu -->
+  <div class="overlay">
+    <span id="closebutton" class="fa fa-times fa-4x"></span> <!-- x marks the spot -->
+    <nav>
+      <ul>
+        <li><h1><a href="#">About</a></h1></li>
+        <li><h1><a href="#">My Work</a></h1></li>
+        <li><h1><a href="#">My Process</a></h1></li>
+        <li><h1><a href="#">Blog</a></h1></li>
+        <li><h1><a href="#">Contact Me</a></h1></li>
+        <li class="connect">
+          <a href="https://twitter.com/linaisamoon" target="_blank"><span id="twitternav" class="fa fa-twitter fa-lg"></span></a>
+          <a href="mailto:me@linamoon.me?Subject=Service%20Inquiry" target="_blank"><span id="emailnav" class="fa fa-envelope"></span></a>
+        </li>
+      </ul>
+    </nav>
+  </div> <!-- end .overlay menu -->
 
 
   <!-- /////////////// page 1 (yellow) /////////////// -->
@@ -52,10 +60,10 @@
     <div id="page1container" class="layoutcontainer">
           
       <h1>My name is Lina Moon, and I'm an aspiring UX + graphic designer.</h1>
-      <h2>Recently, I received the <a href="http://studentpress.org/acp/winners/design14.html"><!-- <span class="bold"> -->ACP 2014 Design of the Year Award<!-- </span> --></a> for my work at the <a href="utdmercury.com"><span class="italics">UTD Mercury</span></a>, where I worked as an art director.</h2>
+      <h2>Recently, I received the <a href="http://studentpress.org/acp/winners/design14.html" target="_blank"><!-- <span class="bold"> -->ACP 2014 Design of the Year Award<!-- </span> --></a> for my work at the <a href="http://utdmercury.com" target="_blank"><span class="italics">UTD Mercury</span></a>, where I worked as an art director.</h2>
       <h2>Currently, I'm practicing different styles of Frakfurt calligraphy, with the green 3.8mm Pilot Parallel pen as my weapon of choice.</h2>
 
-      <h6>Learn more about me</h6>
+      <h6>Learn more below <span class="fa fa-chevron-down"></span></h6>
 
     </div> <!-- end #page1container -->
   </section> <!-- end section #page1 -->
@@ -71,7 +79,7 @@
 
         <div id="quote" class="box-container-col1"> 
           <h6>Design is in everything we make, but it’s also between those things. It’s a mix of craft, science, storytelling, propaganda, and philosophy.</h6>
-          <h6 class="quoteby">&mdash;Erik Adigard</h6>
+          <h6 class="quoteby">&mdash;<a href="https://en.wikipedia.org/wiki/Erik_Adigard">Erik Adigard</a></h6>
         </div> <!-- end #quote -->
 
         <div id="beliefs" class="box-container-col1"> 
@@ -90,93 +98,15 @@
             <li><h6>4</h6></li>
           </ol>
 
+          <h6>Read more about me</h6>
+
         </div> <!-- end #beliefs -->
 
-      </div> <!-- end .col1-container -->
-
-      
-      <!-- .col2-container -->
-      <div class="col2-container">
-
-        <div id="awards" class="box-container-col2"> <!-- awards box -->
-          <h4>Some awards I've received</h4>
-
-          <div id="awardscontainer">
-            <figure>
-              <img src="img/placeholder.png" alt="">
-                <figcaption><abbr title="Associated College Press">ACP</abbr></figcaption>
-            </figure>
-            <figure>
-              <img src="img/placeholder.png" alt="">
-                <figcaption><abbr title="Texas Intercollegiate Press Association">TIPA</abbr></figcaption>
-            </figure>
-          </div> <!-- end .flex-img-container -->
-
-        </div> <!-- end #awards -->
-
-        <div id="orgs" class="box-container-col2"> <!-- orgs box -->
-          <h4>Organizations I'm involved in</h4>
-
-          <div id="orgscontainer">
-            <figure>
-              <img src="img/placeholder.png" alt="">
-                <figcaption>UT Dallas User Experience Club</figcaption>
-            </figure>
-            <figure>
-            <img src="img/placeholder.png" alt="">
-              <figcaption>Dallas User Experience Professionals' Group</figcaption>
-            </figure>
-          </div> <!-- end .flex-img-container -->
-
-        </div> <!-- end #orgs -->
-
-      </div> <!-- end .col2-container -->
-          
-    </div> <!-- end #page2container -->
-  </section> <!-- end section #page2 -->
-
-
-  <!-- /////////////// page 3 (pink) /////////////// -->
-  <section id="page3" class="layout">
-    <div id="page3container" class="layoutcontainer flexbox-container">
-      
-
-      <!-- .col1-container -->
-      <div class="col1-container">
-        <div id="work" class="box-container-col1"> 
-          <h3>Some work I've done.</h3>
-
-            <div class="post">
-              <h5>Smartfridge</h5>
-              <div class="postcontainer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
-                <img src="img/placeholder-work.png" alt="">
-              </div> <!-- end .postcontainer -->
-            </div> <!-- end .post -->
-
-            <div class="post">
-              <h5>Smartfridge</h5>
-              <div class="postcontainer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
-                <img src="img/placeholder-work.png" alt="">
-              </div> <!-- end .postcontainer -->
-            </div> <!-- end .post -->
-
-            <div class="post">
-              <h5>Smartfridge</h5>
-              <div class="postcontainer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
-                <img src="img/placeholder-work.png" alt="">
-              </div> <!-- end .postcontainer -->
-            </div> <!-- end .post -->
-
-        </div> <!-- end #work -->
 
       </div> <!-- end .col1-container -->
 
-      
       <!-- .col2-container -->
-      <div class="col2-container">
+      <aside class="col2-container">
 
         <div id="goodat" class="box-container-col2"> 
           <h4>I am fluent in</h4>
@@ -221,7 +151,97 @@
           </div> <!-- end #notsogoodatcontainer -->
         </div> <!-- end #notsogoodat -->
 
-      </div> <!-- end .col2-container -->
+      </aside> <!-- end .col2-container -->
+
+      
+      
+          
+    </div> <!-- end #page2container -->
+  </section> <!-- end section #page2 -->
+
+
+  <!-- /////////////// page 3 (pink) /////////////// -->
+  <section id="page3" class="layout">
+    <div id="page3container" class="layoutcontainer flexbox-container">
+      
+
+      <!-- .col1-container -->
+      <div class="col1-container">
+        <div id="work" class="box-container-col1"> 
+          <h3>Some work I've done.</h3>
+
+            <div class="workpost">
+              <h5>Smartfridge</h5>
+              <div class="workpostcontainer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
+                <img src="img-content/placeholder-work.png" alt="">
+              </div> <!-- end .workpostcontainer -->
+            </div> <!-- end .workpost -->
+
+            <div class="workpost">
+              <h5>Smartfridge</h5>
+              <div class="workpostcontainer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
+                <img src="img-content/placeholder-work.png" alt="">
+              </div> <!-- end .workpostcontainer -->
+            </div> <!-- end .workpost -->
+
+            <div class="workpost">
+              <h5>Smartfridge</h5>
+              <div class="workpostcontainer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
+                <img src="img-content/placeholder-work.png" alt="">
+              </div> <!-- end .workpostcontainer -->
+            </div> <!-- end .workpost -->
+
+            <h6>See more of my work</h6>
+
+        </div> <!-- end #work -->
+
+
+
+      </div> <!-- end .col1-container -->
+
+      <!-- .col2-container -->
+
+      <aside class="col2-container">
+
+        <div id="awards" class="box-container-col2"> <!-- awards box -->
+          <h4>Some awards I've received</h4>
+
+          <div id="awardscontainer">
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption><abbr title="Associated College Press">ACP</abbr></figcaption>
+            </figure>
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption><abbr title="Texas Intercollegiate Press Association">TIPA</abbr></figcaption>
+            </figure>
+          </div> <!-- end .flex-img-container -->
+
+        </div> <!-- end #awards -->
+
+        <div id="orgs" class="box-container-col2"> <!-- orgs box -->
+          <h4>Organizations I'm involved in</h4>
+
+          <div id="orgscontainer">
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption>UT Dallas User Experience Club</figcaption>
+            </figure>
+            <figure>
+            <img src="img-content/placeholder.png" alt="">
+              <figcaption>Dallas User Experience Professionals' Group</figcaption>
+            </figure>
+          </div> <!-- end .flex-img-container -->
+
+        </div> <!-- end #orgs -->
+
+      </aside> <!-- end .col2-container -->
+
+      
+      
           
     </div> <!-- end #page3container -->
   </section> <!-- end section #page3 -->
@@ -236,7 +256,40 @@
         <div id="process" class="box-container-col1"> 
           <h3>Tools in my arsenal</h3>
 
-            
+            <div class="tool">
+              <img src="img-content/placeholder-tool.png" alt="">
+              <div class="toolcontainer">
+                <h4>Smartfridge</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div> <!-- end .toolcontainer -->
+            </div> <!-- end .tool -->
+
+            <div class="tool">
+              <img src="img-content/placeholder-tool.png" alt="">
+              <div class="toolcontainer">
+                <h4>Smartfridge</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div> <!-- end .toolcontainer -->
+            </div> <!-- end .tool -->
+
+            <div class="tool">
+              <img src="img-content/placeholder-tool.png" alt="">
+              <div class="toolcontainer">
+                <h4>Smartfridge</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div> <!-- end .toolcontainer -->
+            </div> <!-- end .tool -->
+
+            <div class="tool">
+              <img src="img-content/placeholder-tool.png" alt="">
+              <div class="toolcontainer">
+                <h4>Smartfridge</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div> <!-- end .toolcontainer -->
+            </div> <!-- end .tool -->
+
+            <h6>Understand more of my process</h6>
+
 
         </div> <!-- end #process -->
 
@@ -244,18 +297,39 @@
 
       
       <!-- .col2-container -->
-      <div class="col2-container">
+      <aside class="col2-container">
 
         <div id="blog" class="box-container-col2"> 
           <h4>Blog</h4>
           <div id="blogcontainer">
 
+            <div class="blogpost">
+              <p class="date">June 20, 2015</p>
+              <h5>Smartfridge</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
+              <p class="readmore">Read More</p>
+              <p class="blogpostfooter">In Design | 0 Comments</p>
+            </div> <!-- end .blogpost -->
+
+            <div class="blogpost">
+              <p class="date">June 20, 2015</p>
+              <h5>Smartfridge</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. </p>
+              <p class="readmore">Read More</p>
+              <p class="blogpostfooter">In Design | 0 Comments</p>
+            </div> <!-- end .blogpost -->
+
+
+
+
 
 
           </div> <!-- end #blogcontainer -->
+
+          <h6>A pretty penny for my thoughts</h6>
         </div> <!-- end #blog -->
 
-      </div> <!-- end .col2-container -->
+      </aside> <!-- end .col2-container -->
           
     </div> <!-- end #page4container -->
   </section> <!-- end section #page4 -->
@@ -269,13 +343,16 @@
       <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac.</h2>
       <ol>
         <li>
-          <h3>1. Download my resume.</h3>
+          <h3>1. Download my <a href="http://goo.gl/3qOf9H" target="_blank">resume.</a></h3>
         </li>
         <li>
-          <h3>2. Contact me at _____.</h3>
+          <h3>2. Read over just a few details.</h3>
         </li>
         <li>
-          <h3>3. Connect with me on __ and __ .</h3>
+          <h3>3. Contact me at <a href="mailto:me@linamoon.me?Subject=Service%20Inquiry" target="_blank">me@linamoon.me</a>.</h3>
+        </li>
+        <li>
+          <h3>4. Connect with me on <a href="https://twitter.com/linaisamoon" target="_blank"><span class="fa fa-twitter-square"></span></a> and <span class="fa fa-linkedin-square"></span> .</h3>
         </li>
       </ol>
 
@@ -285,13 +362,9 @@
   </section> <!-- end section #page5 -->
 
   <footer>
-    <h4 id="copyright">Copyright 2015 Lina Moon</h4>
-    <h4 id="madewithlove">Made with __ in Plano, TX.</h4>
+    <h4 id="copyright"><span class="fa fa-copyright"></span> 2015 Lina Moon</h4>
+    <h4 id="madewithlove">Made with <span class="fa fa-heart"></span> in Plano, TX.</h4>
   </footer>
-
-
-
-
 
 
 
@@ -302,6 +375,22 @@
 
   <!-- ////////////////////////////// jQuery ////////////////////////////// -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script>
+
+  $("#navbutton").click(function() {
+    $(".overlay").effect("fade");
+
+  });
+
+  $("#closebutton").click(function() {
+    $(".overlay").effect("fade");
+
+  });
+
+  </script>
+
 
 
 </body> <!-- end body-->

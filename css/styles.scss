@@ -18,26 +18,28 @@ $page3BackgroundColor: #F47472; /* rose */
 $page4BackgroundColor: #C1E5E1; /* sea green */
 $page5BackgroundColor: #CEE8EF; /* baby blue */
 
+$gray: #B3B3B3;
+
 /* ------------------------------ typography ------------------------------ */
 
 @font-face {
 	font-family: $pageHeadingFont, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-Black.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-Black.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageHeadingFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-BlackItalic.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-BlackItalic.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageParagraphFont, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-Book.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-Book.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageParagraphFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-BookItalic.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-BookItalic.otf') format('opentype');
 }
 
 /* ------------------------------ headings ------------------------------ */
@@ -223,6 +225,69 @@ header {
 
 }
 
+/* --------------- overlay menu --------------- */
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.9);
+	z-index: 10;
+
+	color: $gray;
+
+
+	overflow: scroll;
+
+	#closebutton {
+		display: block;
+		text-align: right;
+		padding: 10px 20px;
+
+	}
+
+	nav ul li {
+		font-size: 4em;
+		text-align: center;
+		padding-top: percentage(10px/1024px);
+		padding-bottom: percentage(10px/1024px);
+
+		&:nth-child(1):hover {
+			background-color: #B1D8BE;
+			h1 { color: white; }
+		}
+		&:nth-child(2):hover {
+			background-color: #F47472;
+			h1 { color: white; }
+		}
+		&:nth-child(3):hover {
+			background-color: #C1E5E1;
+			h1 { color: white; }
+		}
+		&:nth-child(4):hover {
+			background-color: #C1E5E1;
+			h1 { color: white; }
+		}
+		&:nth-child(5):hover {
+			background-color: #CEE8EF;;
+			h1 { color: white; }
+		}
+
+		#twitternav:hover {
+			color: #C4C4C4; /*twitter blue*/
+		}
+
+		#emailnav:hover {
+			color: #C4C4C4; /*twitter blue*/
+		}
+		
+	}
+}
+
+
 /* --------------- page layout --------------- */
 
 .layout {
@@ -375,11 +440,11 @@ header {
 
 /* page 3 boxes */
 
-.post {
+.workpost {
 	padding-bottom: percentage(10px/500px)
 }
 
-.postcontainer {
+.workpostcontainer {
 
 	p {
 		width: percentage(250px/500px);
@@ -413,15 +478,55 @@ header {
 
 	@include heading3;
 
+	@include heading4;
+
 	@include heading5;
 
 	@include paragraph;
 
-	@include heading4;
+	.tool {
+		width: percentage(190px/500px);
+		padding-right: percentage(50px/500px);
+		padding-bottom: percentage(20px/500px);
+		display: inline-block;
 
+		img {
+			padding-bottom: percentage(20px/250px);
+			text-align: center;
+		}
+
+		h4 {
+			padding-bottom: 0.5em;
+		}
+	}
+
+	.blogpost {
+		
+		padding-top: percentage(30px/300px);
+		padding-bottom: percentage(30px/300px);
+
+		.date, .readmore, .blogpostfooter {
+			text-transform: uppercase;
+			font-size: 0.9em;
+			padding-bottom: 0;
+		}
+
+		h5 {
+			padding-bottom: 0;
+		}
+		p {
+			padding-bottom: 0.4em;
+		}
+		.blogpostfooter {
+			text-align: right;
+		}
+
+	}
 }
 
-/* page 4 boxes */
+
+
+
 
 
 
@@ -454,7 +559,7 @@ footer {
 	padding: percentage(21px/1024px); /* padding for the main container */
 	padding-bottom: percentage(31px/1024px);
 
-	color: #B3B3B3;
+	color: $gray;
 
 	@include heading4;
 	h4 {
@@ -470,8 +575,6 @@ footer {
 		float: right;
 	}
 }
-
-
 
 
 /* ------------------------------ media queries ------------------------------ */
