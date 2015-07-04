@@ -22,22 +22,22 @@ $page5BackgroundColor: #CEE8EF; /* baby blue */
 
 @font-face {
 	font-family: $pageHeadingFont, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-Black.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-Black.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageHeadingFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-BlackItalic.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-BlackItalic.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageParagraphFont, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-Book.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-Book.otf') format('opentype');
 }
 
 @font-face {
 	font-family: $pageParagraphFontItalic, 'Franklin Gothic Medium', Arial, sans-serif;
-	src: url('fonts/GothamNarrow-BookItalic.otf') format('opentype');
+	src: url('../fonts/GothamNarrow-BookItalic.otf') format('opentype');
 }
 
 /* ------------------------------ headings ------------------------------ */
