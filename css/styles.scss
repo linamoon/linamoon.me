@@ -613,6 +613,28 @@ footer {
 
 /* ------------------------------ media queries ------------------------------ */
 
+@media screen and (max-width: 900px) {
 
+	.flexbox-container { /* for any page that has the main 2-column layout */
+		display: block;
+
+		> .col1-container { /* main column 1 */
+			width: 100%; /* 800 is the width of .layoutcontainer */
+			/* border-right: 1px solid $pageFontColor; */
+		}
+
+		> .col2-container { 
+			width: 100%;
+			display: -ms-flex;
+			display: -webkit-flex;
+			display: flex;
+
+		}
+
+	} /* end .flexbox-container */
+
+
+
+}
 
 

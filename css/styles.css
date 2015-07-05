@@ -417,5 +417,21 @@ footer {
     float: right; }
 
 /* ------------------------------ media queries ------------------------------ */
+@media screen and (max-width: 900px) {
+  .flexbox-container {
+    /* for any page that has the main 2-column layout */
+    display: block; }
+    .flexbox-container > .col1-container {
+      /* main column 1 */
+      width: 100%;
+      /* 800 is the width of .layoutcontainer */
+      /* border-right: 1px solid $pageFontColor; */ }
+    .flexbox-container > .col2-container {
+      width: 100%;
+      display: -ms-flex;
+      display: -webkit-flex;
+      display: flex; }
+
+  /* end .flexbox-container */ }
 
 /*# sourceMappingURL=styles.css.map */
