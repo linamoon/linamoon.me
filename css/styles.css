@@ -90,27 +90,21 @@ img {
 /* --------------- header --------------- */
 header {
   width: 100%;
-  height: auto;
-  /*background: #ee4a37;*/
-  position: fixed;
-  /*z-index: 100;*/ }
+  background: #ee4a37; }
   header #logo {
-    width: 5.17578%;
-    padding-left: 4.88281%;
-    padding-right: 4.88281%;
-    padding-top: 4.00391%;
-    padding-bottom: 4.00391%;
-    float: left;
-    /*	img {
-    		width: 134px;
-    	}*/ }
+    left: 0; }
+    header #logo #logofixed {
+      width: 80px;
+      height: auto;
+      padding: 50px 80px; }
   header #navbutton {
-    /*width: percentage(29px/1024px);*/
-    /*padding: percentage(21px/1024px);*/
-    width: 35px;
-    padding: 25px;
-    padding-top: 70px;
-    float: right; }
+    right: 0;
+    color: white;
+    z-index: 100; }
+    header #navbutton #navbuttonfixed {
+      padding: 50px; }
+  header #logo, header #navbutton {
+    position: fixed; }
 
 /* --------------- overlay menu --------------- */
 .overlay {
@@ -173,8 +167,8 @@ header {
   /*margin-right: percentage(29px/1024px);*/
   box-sizing: border-box;
   /* box-sizing puts borders and padding inside the content */
-  border-left: 1px solid #FFFFFF;
-  border-right: 1px solid #FFFFFF;
+  /*	border-left: 1px solid $pageFontColor;
+  	border-right: 1px solid $pageFontColor;*/
   color: #FFFFFF; }
 
 /* for pages with the 2-column layout */
@@ -202,7 +196,7 @@ header {
 
 .box-container-col2 {
   /* boxes inside column 2 */
-  padding: 10.33333%; }
+  padding: 15.33333% 10.33333% 3.66667% 10.33333%; }
 
 /* --------------- page 1 (yellow) --------------- */
 #page1 {
@@ -226,7 +220,7 @@ header {
 #page2 {
   background: #B1D8BE; }
   #page2 .col1-container {
-    border-right: 1px solid #FFFFFF; }
+    /*border-right: 1px solid $pageFontColor;*/ }
 
 #page2container h6 {
   font: 2em/1.2 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
@@ -260,7 +254,7 @@ header {
 /* page 2 boxes */
 #quote {
   /* column 1, 1st box */
-  border-bottom: 1px solid #FFFFFF; }
+  /*border-bottom: 1px solid $pageFontColor;*/ }
   #quote .quoteby {
     text-align: right; }
 
@@ -286,13 +280,13 @@ header {
 
 #awards {
   /* column 2, 1st box */
-  border-bottom: 1px solid #FFFFFF; }
+  /*border-bottom: 1px solid $pageFontColor;*/ }
 
 /* --------------- page 3 (pink) --------------- */
 #page3 {
   background: #F47472; }
   #page3 .col1-container {
-    border-left: 1px solid #FFFFFF; }
+    /*border-left: 1px solid $pageFontColor;*/ }
 
 #page3container h3 {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
@@ -320,7 +314,7 @@ header {
   vertical-align: top; }
 
 #goodat {
-  border-bottom: 1px solid #FFFFFF; }
+  /*border-bottom: 1px solid $pageFontColor;*/ }
 
 .skillslist {
   display: inline-block;
@@ -333,7 +327,7 @@ header {
 #page4 {
   background: #C1E5E1; }
   #page4 .col1-container {
-    border-right: 1px solid #FFFFFF; }
+    /*border-right: 1px solid $pageFontColor;*/ }
 
 #page4container h3 {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
@@ -433,5 +427,8 @@ footer {
       display: flex; }
 
   /* end .flexbox-container */ }
+@media screen and (max-width: 700px) {
+  #quote {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -193,37 +193,36 @@ img {
 
 header {
 	width: 100%;
-	height: auto;
-	/*background: #ee4a37;*/
-	position: fixed;
-	/*z-index: 100;*/
+	background: #ee4a37;
 
 	#logo {
-		width: percentage(53px/1024px);
+		left: 0;
 
-		padding-left: percentage(50px/1024px);
-		padding-right: percentage(50px/1024px);
-		padding-top: percentage(41px/1024px);
-		padding-bottom: percentage(41px/1024px);
-		
-		float: left;
-
-	/*	img {
-			width: 134px;
-		}*/
+		#logofixed {
+			width: 80px;
+			height: auto;
+			padding: 50px 80px;
+		}
 	}
 
 	#navbutton {
-		/*width: percentage(29px/1024px);*/
-		/*padding: percentage(21px/1024px);*/
-		width: 35px;
-		padding: 25px;
-		padding-top: 70px;
-		
-		float: right;
+		right: 0;
+		color: white;
+		z-index: 100;
+
+		#navbuttonfixed {
+			padding: 50px;
+		}
+
+	}
+
+	#logo, #navbutton {
+		position: fixed;
 	}
 
 }
+
+
 
 /* --------------- overlay menu --------------- */
 
@@ -302,8 +301,8 @@ header {
 	/*margin-right: percentage(29px/1024px);*/
 
 	box-sizing: border-box; /* box-sizing puts borders and padding inside the content */
-	border-left: 1px solid $pageFontColor;
-	border-right: 1px solid $pageFontColor;
+/*	border-left: 1px solid $pageFontColor;
+	border-right: 1px solid $pageFontColor;*/
 
 	color: $pageFontColor;
 }
@@ -337,7 +336,8 @@ header {
 }
 
 .box-container-col2 { /* boxes inside column 2 */
-	padding: percentage(31px/300px);
+	padding: percentage(46px/300px) percentage(31px/300px) percentage(11px/300px) percentage(31px/300px);
+
 }
 
 /* --------------- page 1 (yellow) --------------- */
@@ -364,7 +364,7 @@ header {
 	background: $page2BackgroundColor;
 
 	.col1-container {
-		border-right: 1px solid $pageFontColor;
+		/*border-right: 1px solid $pageFontColor;*/
 	}
 }
 
@@ -402,7 +402,7 @@ header {
 /* page 2 boxes */
 
 #quote { /* column 1, 1st box */
-	border-bottom: 1px solid $pageFontColor;
+	/*border-bottom: 1px solid $pageFontColor;*/
 
 	.quoteby {
 		text-align: right;
@@ -440,7 +440,7 @@ header {
 }
 
 #awards { /* column 2, 1st box */
-	border-bottom: 1px solid $pageFontColor;
+	/*border-bottom: 1px solid $pageFontColor;*/
 }
 
 /* --------------- page 3 (pink) --------------- */
@@ -449,7 +449,7 @@ header {
 	background: $page3BackgroundColor;
 
 	.col1-container {
-		border-left: 1px solid $pageFontColor;
+		/*border-left: 1px solid $pageFontColor;*/
 	}
 }
 
@@ -486,7 +486,7 @@ header {
 }
 
 #goodat {
-	border-bottom: 1px solid $pageFontColor;
+	/*border-bottom: 1px solid $pageFontColor;*/
 }
 
 .skillslist {
@@ -504,7 +504,7 @@ header {
 	background: $page4BackgroundColor;
 
 	.col1-container {
-		border-right: 1px solid $pageFontColor;
+		/*border-right: 1px solid $pageFontColor;*/
 	}
 }
 
@@ -633,8 +633,13 @@ footer {
 
 	} /* end .flexbox-container */
 
+}
 
+@media screen and (max-width: 700px) {
 
+	#quote {
+		display: none;
+	}
 }
 
 

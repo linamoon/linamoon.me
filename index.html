@@ -22,23 +22,17 @@
 
   <!-- /////////////// header /////////////// -->
   <header>
-
     <!-- logo -->
-    <div id="logo">
-      <a href="">
-        <img src="img/logo-1.png" alt="" >
-      </a>
-    </div>
+    <div id="logo"><a href=""><img id="logofixed" src="img/logo-1.png" alt=""></a></div>
 
     <!-- nav icon -->
-    <div id="navbutton">
-      <img src="img/nav.png" alt="" >
-    </div>
+    <div id="navbutton"><span id="navbuttonfixed" class="fa fa-bars fa-3x"></span></div>
+
   </header> <!-- end header  -->
 
   <!-- .overlay menu -->
   <div class="overlay">
-    <span id="closebutton" class="fa fa-times fa-4x"></span> <!-- x marks the spot -->
+
     <nav>
       <ul>
         <li><h1><a href="#">About</a></h1></li>
@@ -396,10 +390,9 @@
 
   });
 
-  $("#closebutton").click(function() {
-    $(".overlay").effect("fade");
+ 
 
-  });
+
 
   // .beliefs carousel
 
