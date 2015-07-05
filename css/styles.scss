@@ -239,8 +239,7 @@ header {
 
 	color: $gray;
 
-
-	overflow: scroll;
+	overflow: auto;
 
 	#closebutton {
 		display: block;
@@ -322,7 +321,7 @@ header {
 
 	> .col1-container { /* main column 1 */
 		width: percentage(500px/800px); /* 800 is the width of .layoutcontainer */
-		border-right: 1px solid $pageFontColor;
+		/*border-right: 1px solid $pageFontColor;*/
 	}
 
 	> .col2-container { /* main column 2 */
@@ -363,6 +362,10 @@ header {
 
 #page2 {
 	background: $page2BackgroundColor;
+
+	.col1-container {
+		border-right: 1px solid $pageFontColor;
+	}
 }
 
 #page2container {
@@ -376,6 +379,8 @@ header {
 
 	@include figurecaption;
 }
+
+
 
 /* tells how to layout the imgs in col 2 */
 
@@ -405,14 +410,32 @@ header {
 }
 
 #beliefs { /* column 1, 2nd box */
-	li {
+
+
+	.slider {
+		position: relative;
+		overflow: hidden;
+
+		li {
+			display: none;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+	}
+
+
+
+	/*li {
 		display: inline-block;
+		padding-right: percentage(15px/500px);
 
 		h5 {
 			font-size: 2em;
 			padding: 0;
 		}
-	}
+	}*/
 	
 }
 
@@ -424,6 +447,10 @@ header {
 
 #page3 {
 	background: $page3BackgroundColor;
+
+	.col1-container {
+		border-left: 1px solid $pageFontColor;
+	}
 }
 
 #page3container {
@@ -439,6 +466,9 @@ header {
 }
 
 /* page 3 boxes */
+
+
+
 
 .workpost {
 	padding-bottom: percentage(10px/500px)
@@ -472,6 +502,10 @@ header {
 
 #page4 {
 	background: $page4BackgroundColor;
+
+	.col1-container {
+		border-right: 1px solid $pageFontColor;
+	}
 }
 
 #page4container {

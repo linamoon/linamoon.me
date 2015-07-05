@@ -42,10 +42,10 @@
     <nav>
       <ul>
         <li><h1><a href="#">About</a></h1></li>
-        <li><h1><a href="#">My Work</a></h1></li>
-        <li><h1><a href="#">My Process</a></h1></li>
+        <li><h1><a href="#">Work</a></h1></li>
+        <li><h1><a href="#">Process</a></h1></li>
         <li><h1><a href="#">Blog</a></h1></li>
-        <li><h1><a href="#">Contact Me</a></h1></li>
+        <li><h1><a href="#">Contact</a></h1></li>
         <li class="connect">
           <a href="https://twitter.com/linaisamoon" target="_blank"><span id="twitternav" class="fa fa-twitter fa-lg"></span></a>
           <a href="mailto:me@linamoon.me?Subject=Service%20Inquiry" target="_blank"><span id="emailnav" class="fa fa-envelope"></span></a>
@@ -59,11 +59,11 @@
   <section id="page1" class="layout">
     <div id="page1container" class="layoutcontainer">
           
-      <h1>My name is Lina Moon, and I'm an aspiring UX + graphic designer.</h1>
+      <h1>My name is Lina Moon, and I'm an user experience + graphic designer.</h1>
       <h2>Recently, I received the <a href="http://studentpress.org/acp/winners/design14.html" target="_blank"><!-- <span class="bold"> -->ACP 2014 Design of the Year Award<!-- </span> --></a> for my work at the <a href="http://utdmercury.com" target="_blank"><span class="italics">UTD Mercury</span></a>, where I worked as an art director.</h2>
       <h2>Currently, I'm practicing different styles of Frakfurt calligraphy, with the green 3.8mm Pilot Parallel pen as my weapon of choice.</h2>
 
-      <h6>Learn more below <span class="fa fa-chevron-down"></span></h6>
+      <h6><a href="#page2">Learn more below <span class="fa fa-chevron-down"></span></a></h6>
 
     </div> <!-- end #page1container -->
   </section> <!-- end section #page1 -->
@@ -85,13 +85,22 @@
         <div id="beliefs" class="box-container-col1"> 
           <h3>I believe in empathy.</h3>
 
-          <ol>
+          <ol class="slider">
             <li>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit nibh, interdum quis ipsum ac, cursus facilisis sem. Donec ornare est dolor, vestibulum pellentesque sem eleifend at.</p>
+              <p>Bacon</p>
+            </li>
+            <li>
+              <p>More bacon</p>
+            </li>
+            <li>
+              <p>Chocolate bacon</p>
+            </li>
+            <li>
+              <p>Chocolate finger-lickin bacon</p>
             </li>
           </ol>
 
-          <ol>
+          <ol class="slidernumbers">
             <li><h6>1</h6></li>
             <li><h6>2</h6></li>
             <li><h6>3</h6></li>
@@ -163,6 +172,44 @@
   <!-- /////////////// page 3 (pink) /////////////// -->
   <section id="page3" class="layout">
     <div id="page3container" class="layoutcontainer flexbox-container">
+
+      <!-- .col2-container -->
+
+      <aside class="col2-container">
+
+        <div id="awards" class="box-container-col2"> <!-- awards box -->
+          <h4>Some awards I've received</h4>
+
+          <div id="awardscontainer">
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption><abbr title="Associated College Press">ACP</abbr></figcaption>
+            </figure>
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption><abbr title="Texas Intercollegiate Press Association">TIPA</abbr></figcaption>
+            </figure>
+          </div> <!-- end .flex-img-container -->
+
+        </div> <!-- end #awards -->
+
+        <div id="orgs" class="box-container-col2"> <!-- orgs box -->
+          <h4>Organizations I'm involved in</h4>
+
+          <div id="orgscontainer">
+            <figure>
+              <img src="img-content/placeholder.png" alt="">
+                <figcaption>UT Dallas User Experience Club</figcaption>
+            </figure>
+            <figure>
+            <img src="img-content/placeholder.png" alt="">
+              <figcaption>Dallas User Experience Professionals' Group</figcaption>
+            </figure>
+          </div> <!-- end .flex-img-container -->
+
+        </div> <!-- end #orgs -->
+
+      </aside> <!-- end .col2-container -->
       
 
       <!-- .col1-container -->
@@ -202,43 +249,7 @@
 
       </div> <!-- end .col1-container -->
 
-      <!-- .col2-container -->
 
-      <aside class="col2-container">
-
-        <div id="awards" class="box-container-col2"> <!-- awards box -->
-          <h4>Some awards I've received</h4>
-
-          <div id="awardscontainer">
-            <figure>
-              <img src="img-content/placeholder.png" alt="">
-                <figcaption><abbr title="Associated College Press">ACP</abbr></figcaption>
-            </figure>
-            <figure>
-              <img src="img-content/placeholder.png" alt="">
-                <figcaption><abbr title="Texas Intercollegiate Press Association">TIPA</abbr></figcaption>
-            </figure>
-          </div> <!-- end .flex-img-container -->
-
-        </div> <!-- end #awards -->
-
-        <div id="orgs" class="box-container-col2"> <!-- orgs box -->
-          <h4>Organizations I'm involved in</h4>
-
-          <div id="orgscontainer">
-            <figure>
-              <img src="img-content/placeholder.png" alt="">
-                <figcaption>UT Dallas User Experience Club</figcaption>
-            </figure>
-            <figure>
-            <img src="img-content/placeholder.png" alt="">
-              <figcaption>Dallas User Experience Professionals' Group</figcaption>
-            </figure>
-          </div> <!-- end .flex-img-container -->
-
-        </div> <!-- end #orgs -->
-
-      </aside> <!-- end .col2-container -->
 
       
       
@@ -379,6 +390,7 @@
 
   <script>
 
+  // fullscreen nav
   $("#navbutton").click(function() {
     $(".overlay").effect("fade");
 
@@ -388,6 +400,40 @@
     $(".overlay").effect("fade");
 
   });
+
+  // .beliefs carousel
+
+  // var $slider = $(".slider");
+  // var $slide = "li";
+  // var $transition_time = 1000; // 1 second
+  // var $time_between_slides = 4000; // 4 seconds
+
+  // function slides() {
+  //   return $slider.find(slide);
+  // }
+
+  // slides().fadeOut();
+
+  // slides().first().addClass("active");
+  // slides().first().fadeIn($transition_time);
+
+  // // auto scroll 
+  // $interval = setInterval(
+  //   function(){
+  //     var $i = $slider.find($slide + '.active').index();
+
+  //     slides().eq($i).removeClass('active');
+  //     slides().eq($i).fadeOut($transition_time);
+
+  //     if (slides().length == $i + 1) $i = -1; // loop to start
+
+  //     slides().eq($i + 1).fadeIn($transition_time);
+  //     slides().eq($i + 1).addClass('active');
+  //   }
+  //   , $transition_time +  $time_between_slides 
+  // );
+
+
 
   </script>
 

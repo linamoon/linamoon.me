@@ -123,7 +123,7 @@ header {
   background: rgba(255, 255, 255, 0.9);
   z-index: 10;
   color: #B3B3B3;
-  overflow: scroll; }
+  overflow: auto; }
   .overlay #closebutton {
     display: block;
     text-align: right;
@@ -190,7 +190,7 @@ header {
     /* main column 1 */
     width: 62.5%;
     /* 800 is the width of .layoutcontainer */
-    border-right: 1px solid #FFFFFF; }
+    /*border-right: 1px solid $pageFontColor;*/ }
   .flexbox-container > .col2-container {
     /* main column 2 */
     width: 37.5%; }
@@ -225,6 +225,8 @@ header {
 /* --------------- page 2 (mint) --------------- */
 #page2 {
   background: #B1D8BE; }
+  #page2 .col1-container {
+    border-right: 1px solid #FFFFFF; }
 
 #page2container h6 {
   font: 2em/1.2 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif; }
@@ -263,12 +265,24 @@ header {
     text-align: right; }
 
 #beliefs {
-  /* column 1, 2nd box */ }
-  #beliefs li {
-    display: inline-block; }
-    #beliefs li h5 {
-      font-size: 2em;
-      padding: 0; }
+  /* column 1, 2nd box */
+  	/*li {
+  		display: inline-block;
+  		padding-right: percentage(15px/500px);
+  
+  		h5 {
+  			font-size: 2em;
+  			padding: 0;
+  		}
+  	}*/ }
+  #beliefs .slider {
+    position: relative;
+    overflow: hidden; }
+    #beliefs .slider li {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0; }
 
 #awards {
   /* column 2, 1st box */
@@ -277,6 +291,8 @@ header {
 /* --------------- page 3 (pink) --------------- */
 #page3 {
   background: #F47472; }
+  #page3 .col1-container {
+    border-left: 1px solid #FFFFFF; }
 
 #page3container h3 {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
@@ -316,6 +332,8 @@ header {
 /* --------------- page 4 (sea green) --------------- */
 #page4 {
   background: #C1E5E1; }
+  #page4 .col1-container {
+    border-right: 1px solid #FFFFFF; }
 
 #page4container h3 {
   font: 2.7em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
