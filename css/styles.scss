@@ -196,6 +196,7 @@ header {
 	background: #ee4a37;
 
 	#logo {
+		top: 0;
 		left: 0;
 
 		#logofixed {
@@ -206,8 +207,9 @@ header {
 	}
 
 	#navbutton {
+		top: 0;
 		right: 0;
-		color: white;
+		color: black;
 		z-index: 100;
 
 		#navbuttonfixed {
@@ -240,15 +242,13 @@ header {
 
 	overflow: auto;
 
-	#closebutton {
-		display: block;
-		text-align: right;
-		padding: 10px 20px;
-
+	nav {
+		padding: percentage(30px/1024px) percentage(100px/1024px);
 	}
 
 	nav ul li {
-		font-size: 4em;
+		@include heading1;
+		text-transform: uppercase;
 		text-align: center;
 		padding-top: percentage(10px/1024px);
 		padding-bottom: percentage(10px/1024px);
@@ -632,6 +632,10 @@ footer {
 		}
 
 	} /* end .flexbox-container */
+
+	header #logo, header #navbutton {
+		position: static;
+	}
 
 }
 

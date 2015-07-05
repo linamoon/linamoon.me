@@ -92,14 +92,16 @@ header {
   width: 100%;
   background: #ee4a37; }
   header #logo {
+    top: 0;
     left: 0; }
     header #logo #logofixed {
       width: 80px;
       height: auto;
       padding: 50px 80px; }
   header #navbutton {
+    top: 0;
     right: 0;
-    color: white;
+    color: black;
     z-index: 100; }
     header #navbutton #navbuttonfixed {
       padding: 50px; }
@@ -118,15 +120,16 @@ header {
   z-index: 10;
   color: #B3B3B3;
   overflow: auto; }
-  .overlay #closebutton {
-    display: block;
-    text-align: right;
-    padding: 10px 20px; }
+  .overlay nav {
+    padding: 2.92969% 9.76563%; }
   .overlay nav ul li {
-    font-size: 4em;
+    text-transform: uppercase;
     text-align: center;
     padding-top: 0.97656%;
     padding-bottom: 0.97656%; }
+    .overlay nav ul li h1 {
+      font: 4em/1 "GothamNarrow-Black", "Franklin Gothic Medium", Arial, sans-serif;
+      padding-bottom: 0.4em; }
     .overlay nav ul li:nth-child(1):hover {
       background-color: #B1D8BE; }
       .overlay nav ul li:nth-child(1):hover h1 {
@@ -426,7 +429,9 @@ footer {
       display: -webkit-flex;
       display: flex; }
 
-  /* end .flexbox-container */ }
+  /* end .flexbox-container */
+  header #logo, header #navbutton {
+    position: static; } }
 @media screen and (max-width: 700px) {
   #quote {
     display: none; } }

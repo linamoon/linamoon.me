@@ -46,6 +46,7 @@
         </li>
       </ul>
     </nav>
+    
   </div> <!-- end .overlay menu -->
 
 
@@ -384,13 +385,18 @@
 
   <script>
 
-  // fullscreen nav
+  // $("#navbutton").click(function() {
+  //   $(".overlay").effect("fade", function() {
+  //     $("#navbutton").animate({
+  //       color: "black"
+  //     });
+  //   });
+
+  // });
+
   $("#navbutton").click(function() {
-    $(".overlay").effect("fade");
-
+    $(".overlay").toggle("fade");
   });
-
- 
 
 
 
